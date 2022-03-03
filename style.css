@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Holtwood+One+SC&family=Roboto&display=swap');
+
+
+/*carrousel*/
+@keyframes fade1 {
+    0%    { opacity: 1; }
+    33%   { opacity: 0; }
+    66%   { opacity: 0; }
+    100%  { opacity: 1; }
+}
+@keyframes fade2 {
+    0%    { opacity: 0; }
+    33%   { opacity: 1; }
+    66%   { opacity: 0; }
+    100%  { opacity: 0; }
+}
+@keyframes fade3 {
+    0%    { opacity: 0; }
+    33%   { opacity: 0; }
+    66%   { opacity: 1; }
+    100%  { opacity: 0; }
+}
+.carruselCont{
+    width: 70%;
+    height: 400px;
+    padding: 1%;
+    padding-left: 1%;
+    padding-top: 3%;
+}
+.carrusel1 {
+    animation: fade1 ease 10s infinite;
+    width:  100%;
+    height: 100%;
+    position:relative;
+}
+.carrusel2{
+    opacity:0;
+    animation: fade2 ease 10s infinite;
+    width:  100%;
+    height: 100%;
+    bottom: 101%;       
+    position:relative;
+}
+.carrusel3{
+    opacity:0;
+    animation: fade3 ease 10s infinite;
+    width:  100%;
+    height: 100%;
+    bottom: 202%;
+    position:relative;
+}
+/*Mediaqueries carrusel*/
+@media screen and (max-width: 1100px) {
+    .carruselCont{
+        height: 330px;
+    }
+}
+@media screen and (max-width: 860px) {
+    
+
+    .carruselCont{
+        height: 270px;
+    }
+}
+/*Ultimas mejoras directas 2.0*/
+audio{
+    width:100%;
+    align-self: center;
+    padding-bottom: 5%;
+}
+
+
+/*Nuevos elementos JQuery*/
+.toggleNav{
+    position:fixed;
+    background-color: rgba(248, 211, 248, 0.829);
+    border-radius: 10px;
+    border : 2px solid rgb(131, 50, 104);
+    z-index: 2;
+
+}
+.toggleNav img{
+    margin: 10px; 
+    width: 16px;
+    height: 14px;
+}
+
+/*general*/
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: rgb(131, 50, 104);
+    font-family: 'Roboto', sans-serif;
+
+}
+h1{
+    font-family: 'Holtwood One SC', serif;
+}
+header{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    justify-content: space-between;
+
+    background-color: rgb(253, 255, 124);
+    padding-right: 1%;
+}
+#logo{
+    width: 8%;
+    align-self: flex-start;
+    background-color: rgb(0, 0, 0);
+
+}
+header input{
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.accesos{
+    width: 12%;
+    padding-top: 3%;
+   
+}
+.accesos img{
+    width: 20%;
+}
+
+
+.container1{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: rgb(253, 252, 243);
+    width:100%;
+    margin-top: 1%;
+}
+nav{
+    
+    align-self: flex-start;
+    width: 10%;
+    min-width: 90px;
+    background-color: rgb(34, 1, 29);
+    border: 1px solid black;
+    margin-right: 3%;
+    margin:1%;
+    font-size: 0.8em;
+    z-index: 1;
+}
+
+nav a{
+    color: rgb(255, 255, 255);
+    text-decoration:none;
+}
+nav ul{
+    padding-left: 6%;
+}
+nav ul li{
+    list-style:none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+.menu{ 
+    margin: 2px;
+    width: 96%;
+    height: 55px;
+    background-color: rgb(255, 251, 145);
+}
+h2{
+    text-align: center;
+    margin: 2px;
+    padding: 2px;
+    padding-left: 10px;
+    background-color: rgb(255, 251, 145);
+    font-family: 'Bungee Shade', cursive;
+}
+.noticias{
+    margin-left:13%;
+    width: 86%;
+    border: 1px solid black;
+    margin-top:1%;
+    
+
+}
+
+.contNoticias{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.reproductor{
+    display: flex;
+    flex-flow: row wrap;
+    width: 25%;
+    padding-top: 3%;
+}
+#reproduciendo{
+    align-self: center;
+    width: 80%;
+    padding: 2%;
+    margin-left: 12%;
+    margin-top: 2%;
+    padding-bottom: 6%;
+}
+#play{
+    margin-bottom: 5%;
+    padding-left:45%;
+    width: 15%;
+    height: 15%;
+
+}
+.canciones{
+    margin: 2%;
+    padding: 1%;
+    border-radius: 20px;
+    box-shadow: 1px 2px 3px 1px rgb(255, 93, 182);
+
+    width: 94%;
+    background-color: rgb(255, 255, 255);
+    
+}
+.containerCanciones img{
+    width:17%;
+    padding:1%;
+   
+}
+
+.merch{
+    margin: 2%;
+    padding: 1%;
+    border-radius: 20px;
+    box-shadow: 1px 2px 3px 1px rgb(255, 93, 182);
+
+    width: 94%;
+    background-color: rgb(255, 255, 255);
+    
+}
+.containerMerch{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+}
+.containerMerch div{
+    display: flex;
+    flex-flow: column nowrap;
+    width:19%;
+    overflow: hidden;
+
+}
+.containerMerch div a{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.containerMerch div a img{
+    align-self: center;
+}
+
+.product{
+    height: 78%;
+    padding:1%;
+}
+.carro{
+    align-self: center;
+    width:20%;
+    margin-bottom: 5%;
+}
+
+.seccionVideo{
+    margin: 2%;
+    padding: 1%;
+    border-radius: 20px;
+    box-shadow: 1px 2px 3px 1px rgb(255, 93, 182);
+
+    width: 94%;
+    background-color: rgb(255, 255, 255);
+
+
+}
+.containerVideo{
+    padding: 3%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+
+}
+.video1{
+    padding-right: 2%;
+}
+
+footer{
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: rgb(0, 0, 0);
+    padding: 2%;
+    justify-content: space-between;
+    
+}
+footer ul li{
+    list-style:none;
+    margin-top: 10%;
+
+}
+footer a{
+    color: rgb(255, 255, 255);
+    text-decoration:none;
+}
+.media{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 30%;
+    
+}
+.media a img{
+    width: 100%;
+}
+footer img{
+    height: 20%;
+    width: 20%;;
+}
+#maps{
+    height: 50%;
+    width: 20%;
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    header{
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        background-color: rgb(253, 255, 116);
+        padding-right: 1%;
+    }
+    #logo{
+        width: 30%;
+        align-self: center;   
+    }
+    #name{
+        width: 25%;
+        align-self: center;
+    }
+    .accesos{
+        align-self: center;
+    }
+    .accesos img{
+        width: 40%;
+    }
+
+    .carruselCont{
+        width: 96%;
+        width:97%;
+        align-self: center;
+    }
+    .reproductor{
+        width:75%;
+        align-self: center;
+    }
+    #reproduciendo{
+        width: 80%;
+        align-self: center;
+    }
+
+    .noticias{
+        width: 71%;      
+    }
+    .contNoticias{
+        flex-flow: column wrap;       
+    }
+}
+@media screen and (max-width: 860px) {
+
+    header{
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        background-color: rgb(253, 255, 116);
+        padding-right: 1%;
+    }
+    #logo{
+        width: 30%;
+        align-self: center;   
+    }
+    #name{
+        width: 25%;
+        align-self: center;
+    }
+    .accesos{
+        align-self: center;
+    }
+    .accesos img{
+        width: 40%;
+    }
+    .carruselCont{
+        width: 96%;    
+        align-self: center;
+
+    }
+
+    .reproductor{
+        
+        width:90%;
+        align-self: center;
+    }
+    #reproduciendo{
+        width: 80%;
+        align-self: center;
+    }
+    .noticias{
+        width: 71%;      
+    }
+    .contNoticias{
+        flex-flow: column wrap;       
+    }
+
+
+    /*Retoque de flex a merch y canciones*/
+    .containerCanciones{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin: 2%;
+        padding: 1%;
+
+    
+        width: 94%;
+        background-color: rgb(255, 255, 255);
+        
+    }
+    .containerCanciones img{
+        width:40%;
+        padding:1%;
+       
+    }
+    
+    .merch{
+        margin: 2%;
+        padding: 1%;
+        border-radius: 20px;
+        box-shadow: 1px 2px 3px 1px rgb(197, 189, 76);
+    
+        width: 94%;
+        background-color: rgb(255, 255, 255);
+        
+    }
+    .containerMerch{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        width:100%;
+    }
+    .containerMerch div{
+        display: flex;
+        flex-flow: column nowrap;
+        width:40%;
+    
+    }
+
+
+    .containerVideo{
+        display: flex;
+        flex-flow: column nowrap;
+
+    }
+    .containerVideo object{
+        align-self: center;
+        padding:1%;
+    }
+    .video1{
+        align-self: center;
+        padding:1%;
+    }
+    
+
+    footer{
+        flex-flow: column nowrap;     
+    }
+    footer ul{
+        align-self: center;
+    }
+    footer ul li{
+        text-align: center;
+    }
+
+    .media{
+        align-self: center;
+        justify-content: space-between;
+        width: 70%;
+        padding: 4%;   
+    }
+    .media a img{
+        width: 100%;
+    }
+    footer img{
+        height: 80%;
+        width: 80%;;
+    }
+    #maps{
+        height: 60%;
+        width: 40%;
+        align-self: center;
+    
+    }
+
+}

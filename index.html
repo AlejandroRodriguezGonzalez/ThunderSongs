@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Alejandro Rodríguez">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" />
+        <title>Prototipo escaparate virtual</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="escaparate.js"></script>
+    </head>
+    
+    <body>
+        <header>
+                <img src="imgPagina/logo-rayo.png" alt="Logo de rayo" id="logo" />
+                <h1>THUNDERSONGS</h1>
+                <input type="text" id="name" name="name" required  size="45" placeholder="Busca discos, estilos, accesorios...">
+                <div class="accesos">
+                    <a href="#" target="_blank"><img src="imgPagina/world-map.png" alt="posicion global"/></a>
+                    <a href="#" target="_blank"><img src="imgPagina/user.png" alt="mi cuenta"/></a>
+                    <a href="#" target="_blank"><img src="imgPagina/add-user.png" alt="crea usuario"/></a>
+                    <a href="#" target="_blank"><img src="imgPagina/carro5.png" alt="mi carro"/></a>
+                </div>
+        </header>
+        <div class="toggleNav">
+            <a href="#"><img src="imgPagina/menu.png" alt="icono de menu"/></a>
+        </div> 
+        <nav>
+ 
+            <div class ="menu"></div>
+            <ul>
+                <li><a href="#">Artistas</a></li>
+                <li><a href="#">Colecciones</a></li>
+                <li><a href="#">Ropa</a></li>
+                <li><a href="#">Accesorios</a></li>
+                <li><a href="#">Discos</a></li>
+                <li><a href="#">Conciertos</a></li>
+                <li><a href="#">Temporada 1</a></li>
+                <li><a href="#">Temporada 2</a></li>
+                <li><a href="#">Temporada 3</a></li>
+                <li><a href="#">Temporada 4</a></li>
+                <li><a href="#">Temporada 5</a></li>
+                <li><a href="#">Temporada 6</a></li>
+                <li><a href="#">Temporada 7</a></li>
+            </ul>
+        </nav>  
+ 
+    <div class="container1">    <!-- nav (izq) tiene bloque1(destacados) bloque2(canciones)y bloque3(merch)-->
+        <section class="noticias">
+                <h2>Destacados y noticias</h2>
+                <div class="contNoticias">
+                    <div class="carruselCont">
+                        <img src="imgPagina/carrusel.png"  alt="carrusel" class="carrusel1" />
+                        <img src="imgPagina/carrusel2.webp" alt="savinglives" class="carrusel2"/>
+                        <img src="imgPagina/carrusel3.webp" alt="standbyme" class="carrusel3"/>
+                    </div>
+                    <div class="reproductor">
+                        <img src="imgPagina/tripwire.webp" alt="portada de disco" id="reproduciendo" />
+                        <audio controls>
+                            <source src="audio/CreativeCommonsSong.mp3" type="audio/mp3">
+                            <source src="audio/CreativeCommonsSong.ogg" type="audio/ogg">
+                            <source src="audio/CreativeCommonsSong.acc" type="audio/acc"> <!--Google Chrome no lo soporta-->
+                          </audio>
+                    </div>
+                </div>
+        </section>
+        <section class="canciones">
+            <h2>Canciones</h2>
+            <div class="containerCanciones">
+                <a href="#"><img class="cancion" src="imgPagina/savinglives.webp" alt="savinglives"/></a>
+                <a href="#"><img class="cancion" src="imgPagina/standbyme.webp" alt="standbyme"/></a>
+                <a href="#"><img class="cancion" src="imgPagina/whalesong.webp" alt="whalesong"/></a>
+                <a href="#"><img class="cancion" src="imgPagina/closer.webp" alt="closer"/></a>
+                <a href="#"><img class="cancion" src="imgPagina/thetruth.webp" alt="thetruth"/></a>
+            </div>
+
+        </section>
+        <section class="merch">
+                <h2>Merch</h2>
+                <div class="containerMerch">
+                    <div>
+                        <img class="product" src="imgPagina/camiseta1.jpg" alt="camiseta azul"/>
+                        <a href="#"><img class="carro" src="imgPagina/carro5.png" alt="carro compra"/></a>
+                    </div>
+                    <div>
+                        <img class="product" src="imgPagina/camiseta2.png" alt="camiseta blanca"/>
+                        <a href="#"><img  class="carro" src="imgPagina/carro5.png" alt="carro compra"/></a>
+                    </div>
+                    <div>
+                        <img class="product" src="imgPagina/pantalon1.jpg" alt="pantalon chica negro"/>
+                        <a href="#"><img  class="carro" src="imgPagina/carro5.png" alt="carro compra"/></a>
+                    </div>
+                    <div>
+                        <img class="product" src="imgPagina/accesorio2.jpg" alt="collar estrella"/>
+                        <a href="#"><img  class="carro" src="imgPagina/carro5.png" alt="carro compra"/></a>
+                    </div>
+                    <div>
+                        <img class="product" src="imgPagina/sudadera1.jpg" alt="sudadera color mostaza"/>
+                        <a href="#"><img  class="carro" src="imgPagina/carro5.png" alt="carro compra"/></a>
+                    </div>
+                </div>
+        </section>
+        <section class="seccionVideo">
+            <h2>Video</h2>
+            <div class="containerVideo">
+                <object width="300" height="250" data="Banner_animado/Sequiabanner1.html"></object>
+            
+                <video class="video1" width="400" controls poster="video/poster.jpg">
+                    <source src="video/TemperaturaYprecepitaciónSigloXXI.mp4" type="video/mp4">
+                    <source src="video/TemperaturaYprecepitaciónSigloXXI.webm" type="video/mp4">
+                    <source src="video/TemperaturaYprecepitaciónSigloXXI.ogg" type="video/mp4">   
+                </video>
+            </div>
+        </section>
+    </div> 
+        
+    <footer><!-- debe ser contenedor flex de 3 elementos en linea-->
+        <ul>     
+            <li><a href="#" target="_blank">Contacto</a></li>
+            <li><a href="#" target="_blank">Aviso legal</a></li>
+            <li><a href="#" target="_blank">Privacidad</a></li>
+            <li><a href="#" target="_blank">Condiciones de uso</a></li>
+            <li><a href="#" target="_blank">Condiciones de venta</a></li>
+            <li><a href="#" target="_blank">Informacion de derechos de uso</a></li>
+        </ul>
+        
+        <div class="media">
+            <a href="#" target="_blank"><img src="imgPagina/twitter.png" alt="Twitter"/></a>
+            <a href="#" target="_blank"><img src="imgPagina/facebook.png" alt="facebook"/></a>
+            <a href="#" target="_blank"><img src="imgPagina/instagram.png" alt="instagram"/></a>
+            <a href="#" target="_blank"><img src="imgPagina/youtube.png" alt="youtube"/></a>
+        </div>
+
+        <img src="imgPagina/maps.png" alt="ubicacion google maps" id="maps"/> 
+    </footer>
+
+    </body>
+</html>
